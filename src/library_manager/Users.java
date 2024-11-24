@@ -10,7 +10,7 @@ public class Users {
     private boolean discharged;
 
 
-    //Constrcutor
+    //constructor
         public Users(String id, String name, String last_name_p, String last_name_m, boolean discharged, String borrow_books){
         this.id = id;
         this.name = name;
@@ -70,7 +70,7 @@ public class Users {
         return discharged;
     }
 
-    //Ordenamos los datos para mandarlo a la clase SaveToTxt
+    //We organize the data to send it to the SaveToTxt class
     @Override
     public String toString() {
         return "ID: " + id + "\n"
