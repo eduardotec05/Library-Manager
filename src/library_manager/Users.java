@@ -9,6 +9,17 @@ public class Users {
     private String borrow_books;
     private boolean discharged;
 
+
+    //Constrcutor
+        public Users(String id, String name, String last_name_p, String last_name_m, boolean discharged, String borrow_books){
+        this.id = id;
+        this.name = name;
+        this.last_name_p = last_name_p;
+        this.last_name_m = last_name_m;
+        this.discharged = discharged;
+        this.borrow_books = borrow_books;
+    }
+    
     //setters
     public void setName(String name) {
         this.name = name;
@@ -57,6 +68,17 @@ public class Users {
 
     public boolean getDischarged() {
         return discharged;
+    }
+
+    //Ordenamos los datos para mandarlo a la clase SaveToTxt
+    @Override
+    public String toString() {
+        return "ID: " + id + "\n"
+                + "Name: " + name + "\n"
+                + "Last Name (P): " + last_name_p + "\n"
+                + "Last Name (M): " + last_name_m + "\n"
+                + "Discharged: " + discharged + "\n"
+                + "Borrowed Books: " + borrow_books + "\n";
     }
 
 }
