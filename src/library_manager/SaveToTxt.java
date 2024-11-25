@@ -15,7 +15,10 @@ public class SaveToTxt {
      public static void saveDataUser(Users user,String filePath) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             writer.write(user.toString());//Llama el metodo para imprimir los datos ya ordenados 
-            writer.write("---------------\n"); // Separador entre usuarios registrados
+
+            //Salto de linea
+            writer.newLine();
+             
         } catch (IOException e) {
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
