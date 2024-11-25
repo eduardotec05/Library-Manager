@@ -76,14 +76,6 @@ public class Users {
         return id  + ", " + name + ", " + last_name_p + ", " + last_name_m + ", " + discharged  + ", " + borrow_books;
     }
     
-    //@Override
-   // public String toString() {
-       // return "ID: " + id + "\n"
-                //+ "Name: " + name + "\n"
-                //+ "Last Name (P): " + last_name_p + "\n"
-                //+ "Last Name (M): " + last_name_m + "\n"
-                //+ "Discharged: " + discharged + "\n"
-                //+ "Borrowed Books: " + borrow_books + "\n";
-   // }
+ 
 
 }
