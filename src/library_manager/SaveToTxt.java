@@ -14,9 +14,9 @@ import java.io.IOException;
 public class SaveToTxt {
      public static void saveDataUser(Users user,String filePath) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
-            writer.write(user.toString());//Llama el metodo para imprimir los datos ya ordenados 
+            writer.write(user.toString());//Call the method to print the data already ordered
 
-            //Salto de linea
+            //Line break
             writer.newLine();
              
         } catch (IOException e) {
