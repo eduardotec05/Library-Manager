@@ -1,17 +1,37 @@
 package library_manager;
 
+/**
+ * Class: Users
+ *
+ * This class models a user in a library system. It stores the user's personal
+ * information, the number of books they have borrowed, and whether they have
+ * been discharged from borrowing more books. It provides the necessary setters
+ * and getters for these attributes, and includes a method to format the user's
+ * data as a string for saving purposes.
+ */
 public class Users {
-
+    //atributtes
     private String name;
     private String last_name_p;
     private String last_name_m;
     private String id;
-    private String borrow_books;
+    private int borrow_books;
     private boolean discharged;
 
-
-    //constructor
-        public Users(String id, String name, String last_name_p, String last_name_m, boolean discharged, String borrow_books){
+    /**
+     * Constructor: Users
+     *
+     * Initializes a new user with the specified data.
+     *
+     * @param id The ID of the user.
+     * @param name The first name of the user.
+     * @param last_name_p The paternal last name of the user.
+     * @param last_name_m The maternal last name of the user.
+     * @param discharged Indicates whether the user is discharged (no longer
+     * borrowing books).
+     * @param borrow_books The number of books the user has borrowed.
+     */
+    public Users(String id, String name, String last_name_p, String last_name_m, boolean discharged, int borrow_books) {
         this.id = id;
         this.name = name;
         this.last_name_p = last_name_p;
@@ -19,8 +39,8 @@ public class Users {
         this.discharged = discharged;
         this.borrow_books = borrow_books;
     }
-    
-    //setters
+
+    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -37,15 +57,15 @@ public class Users {
         this.id = id;
     }
 
-    public void setBorrowBooks(String books) {
-        this.borrow_books = books;
+    public void setBorrowBooks(int borrow_books) {
+        this.borrow_books = borrow_books;
     }
 
     public void setDischarged(boolean discharged) {
         this.discharged = discharged;
     }
 
-    //getters
+    // Getters
     public String getId() {
         return id;
     }
@@ -62,7 +82,7 @@ public class Users {
         return last_name_m;
     }
 
-    public String getBorrowBooks() {
+    public int getBorrowBooks() {
         return borrow_books;
     }
 
@@ -70,12 +90,18 @@ public class Users {
         return discharged;
     }
 
-    //We organize the data to send it to the SaveToTxt class
-     @Override
+    /**
+     * Method: toString
+     *
+     * Formats the user data as a string to be used when saving to a text file.
+     * It returns a string with user details in a comma-separated format.
+     *
+     * @return A string representing the user's data, formatted as: id, name,
+     * last_name_p, last_name_m, discharged, borrow_books
+     */
+    @Override
     public String toString() {
-        return id  + ", " + name + ", " + last_name_p + ", " + last_name_m + ", " + discharged  + ", " + borrow_books;
+        return id + ", " + name + ", " + last_name_p + ", " + last_name_m + ", " + discharged + ", " + borrow_books;
     }
-    
- 
 
 }
